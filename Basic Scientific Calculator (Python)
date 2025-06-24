@@ -1,0 +1,139 @@
+# CodeVerse
+
+import math, cmath
+
+# Global configuration
+variables = {}
+history = []
+degree_mode = False
+
+# Advanced functions
+advanced_functions = {
+    # Trigonometry
+    'sin': lambda x: math.sin(math.radians(x)) if degree_mode else math.sin(x),
+    'cos': lambda x: math.cos(math.radians(x)) if degree_mode else math.cos(x),
+    'tan': lambda x: math.tan(math.radians(x)) if degree_mode else math.tan(x),
+    'asin': lambda x: math.degrees(math.asin(x)) if degree_mode else math.asin(x),
+    'acos': lambda x: math.degrees(math.acos(x)) if degree_mode else math.acos(x),
+    'atan': lambda x: math.degrees(math.atan(x)) if degree_mode else math.atan(x),
+
+    # General math
+    'sqrt': math.sqrt, 'log': math.log, 'log10': math.log10,
+    'exp': math.exp, 'abs': abs, 'pow': pow,
+    'round': round, 'floor': math.floor, 'ceil': math.ceil,
+    'factorial': math.factorial, 'sum': sum, 'len': len,
+    'min': min, 'max': max, 'sorted': sorted,
+    'range': lambda *a: list(range(*a)),
+
+    # Conversions
+    'bin': bin, 'hex': hex, 'int': int, 'float': float,
+
+    # Complex numbers
+    'complex': complex,
+
+    # Constants
+    'pi': math.pi, 'e': math.e, 'tau': math.tau, 'inf': math.inf, 'nan': math.nan
+}
+
+# Add cmath functions
+for name in dir(cmath):
+    if not name.startswith("_"):
+        advanced_functions[f"c_{name}"] = getattr(cmath, name)
+
+def show_functions():
+    print("\n📘 AVAILABLE FUNCTIONS:")
+    print("""
+→ Trigonometry: sin(), cos(), tan(), asin(), acos(), atan()
+→ Logarithms: log(x), log10(x), exp(x)
+→ Rounding: round(x), floor(x), ceil(x)
+→ Others: sqrt(), pow(x,y), abs(x), factorial(x)
+→ Lists: sum(), len(), sorted(), min(), max(), range()
+→ Conversions: bin(), hex(), int(), float()
+→ Complex numbers: complex(x,y), c_sin(), c_log(), etc.
+→ Constants: pi, e, tau, inf, nan
+→ Modes: mode deg / mode rad
+→ Variables: x = 3+2 → then use x
+→ History: #1, #2, etc. to reuse expressions
+""")
+
+def show_history():
+    if not history:
+        print("🔹 History is empty.")
+    else:
+        print("\n📜 History:")
+        for i, (expr, res) in enumerate(history[-20:], 1):
+            print(f"#{i}: {expr} = {res}")
+
+def evaluate(expr):
+    global degree_mode
+    expr = expr.strip()
+
+    if expr.lower() == "mode deg":
+        degree_mode = True
+        print("🔄 Mode: DEGREES")
+        return
+    elif expr.lower() == "mode rad":
+        degree_mode = False
+        print("🔄 Mode: RADIANS")
+        return
+    elif expr.lower() == "functions":
+        show_functions()
+        return
+    elif expr.lower() == "history":
+        show_history()
+        return
+
+    if expr.startswith("#"):
+        try:
+            index = int(expr[1:]) - 1
+            expr = history[index][0]
+            print(f"🔁 Reusing #{index+1}: {expr}")
+        except:
+            print("❌ Error: Invalid history index.")
+            return
+
+    if "=" in expr:
+        try:
+            var, val = map(str.strip, expr.split("=", 1))
+            if not var.isidentifier():
+                print("❌ Error: Invalid variable name.")
+                return
+            result = eval(val, {"__builtins__": None}, {**advanced_functions, **variables})
+            variables[var] = result
+            history.append((expr, result))
+            print(f"✅ {var} = {result}")
+        except Exception as e:
+            print(f"❌ Assignment error: {e}")
+        return
+
+    try:
+        result = eval(expr, {"__builtins__": None}, {**advanced_functions, **variables})
+        history.append((expr, result))
+        print(f"= {result}")
+    except ZeroDivisionError:
+        print("❌ Error: Division by zero.")
+    except NameError:
+        print("❌ Error: Undefined variable or function.")
+    except SyntaxError:
+        print("❌ Syntax error.")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+def main():
+    print("\n🧠 EXTREME SCIENTIFIC CALCULATOR")
+    print("Type 'functions' to view available functions.")
+    print("Type 'exit' to quit.\n")
+    while True:
+        try:
+            user_input = input(">> ").strip()
+            if user_input.lower() in ["exit", "quit", "salir"]:
+                print("👋 Goodbye.")
+                break
+            if user_input:
+                evaluate(user_input)
+        except (KeyboardInterrupt, EOFError):
+            print("\n👋 Session ended.")
+            break
+
+if __name__ == "__main__":
+    main(
