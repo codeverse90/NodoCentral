@@ -1,0 +1,141 @@
+# CodeVerse
+
+import os
+import json
+import time
+import random
+
+SAVE_FILE = "hacksave.json"
+
+class Hacker:
+    def __init__(self, alias, nivel=1, acceso=None, misiones_completadas=None, correos=None):
+        self.alias = alias
+        self.nivel = nivel
+        self.acceso = acceso if acceso else ["intranet.local"]
+        self.misiones_completadas = misiones_completadas if misiones_completadas else []
+        self.correos = correos if correos else [
+            {"asunto": "Bienvenido", "contenido": "Bienvenido al sistema. Usa 'ayuda' para comenzar.", "leido": False}
+        ]
+
+    def mostrar_estado(self):
+        print(f"\nUsuario: {self.alias}")
+        print(f"Nivel: {self.nivel}")
+        print(f"Zonas accesibles: {', '.join(self.acceso)}")
+        print(f"Misiones completadas: {len(self.misiones_completadas)}")
+
+    def guardar(self):
+        with open(SAVE_FILE, "w") as f:
+            json.dump(self.__dict__, f)
+        print("[Sistema] Progreso guardado.")
+
+    @staticmethod
+    def cargar():
+        if os.path.exists(SAVE_FILE):
+            with open(SAVE_FILE, "r") as f:
+                data = json.load(f)
+                return Hacker(**data)
+        return None
+
+def sistema_inicio():
+    print("== CodeVerse Terminal HackSim ==")
+    print("1. Nueva sesión")
+    print("2. Cargar sesión")
+    print("3. Salir")
+    opcion = input("> ")
+    if opcion == "1":
+        alias = input("Alias del hacker: ")
+        return Hacker(alias)
+    elif opcion == "2":
+        h = Hacker.cargar()
+        if h:
+            print("[Sistema] Sesión restaurada.")
+            return h
+        else:
+            print("[Sistema] No se encontró una sesión guardada.")
+            return sistema_inicio()
+    else:
+        exit()
+
+def leer_mail(hacker):
+    print("\n[Bandeja de entrada]")
+    nuevos = False
+    for i, correo in enumerate(hacker.correos):
+        estado = "Nuevo" if not correo["leido"] else "Leído"
+        print(f"{i+1}. {correo['asunto']} ({estado})")
+        nuevos = True
+    if not nuevos:
+        print("No tienes correos.")
+        return
+    try:
+        seleccion = int(input("Leer número > "))
+        correo = hacker.correos[seleccion - 1]
+        print("\n---")
+        print(correo["contenido"])
+        print("---")
+        correo["leido"] = True
+    except:
+        print("Selección inválida.")
+
+def consola(hacker):
+    print("\n[Sistema] Accediendo a entorno seguro...")
+    time.sleep(1)
+    print(f"[{hacker.alias}@hacksim] Terminal iniciada. Escribe 'ayuda'.")
+
+    while True:
+        cmd = input(f"{hacker.alias}@terminal:~$ ").strip().lower()
+
+        if cmd == "ayuda":
+            print("Comandos disponibles:")
+            print("• scan       - escanear redes visibles")
+            print("• connect    - conectarse a un servidor")
+            print("• decrypt    - descifrar archivo en red")
+            print("• mail       - leer mensajes internos")
+            print("• estado     - mostrar perfil actual")
+            print("• guardar    - guardar progreso")
+            print("• salir      - cerrar terminal")
+        elif cmd == "scan":
+            print("Escaneando red...")
+            time.sleep(1)
+            nodos = ["192.168.1.101", "10.0.0.22", "172.16.0.5"]
+            print("Nodos detectados:")
+            for ip in nodos:
+                print(f"- {ip}")
+        elif cmd == "connect":
+            ip = input("IP objetivo > ")
+            if ip in ["192.168.1.101", "10.0.0.22", "172.16.0.5"]:
+                print(f"[Conectado a {ip}] Acceso parcial obtenido.")
+                if hacker.nivel >= 2 and "decrypt01" not in hacker.misiones_completadas:
+                    print("Archivo encontrado: secreto01.enc")
+            else:
+                print("Conexión rechazada.")
+        elif cmd == "decrypt":
+            if hacker.nivel >= 2 and "decrypt01" not in hacker.misiones_completadas:
+                print("Descifrando archivo...")
+                time.sleep(2)
+                print("Archivo secreto01.descifrado: clave_root=shadow9")
+                hacker.nivel += 1
+                hacker.misiones_completadas.append("decrypt01")
+                hacker.correos.append({
+                    "asunto": "Nuevo objetivo",
+                    "contenido": "Se ha detectado un servidor oculto. Usa 'scan' y busca 'vault.x'...",
+                    "leido": False
+                })
+                print("[Sistema] Misión completada. Nivel aumentado.")
+            else:
+                print("No hay archivos disponibles o ya completaste esta acción.")
+        elif cmd == "mail":
+            leer_mail(hacker)
+        elif cmd == "estado":
+            hacker.mostrar_estado()
+        elif cmd == "guardar":
+            hacker.guardar()
+        elif cmd == "salir":
+            print("[Sistema] Cerrando sesión...")
+            break
+        else:
+            print("Comando no reconocido. Escribe 'ayuda'.")
+
+if __name__ == "__main__":
+    os.system("cls" if os.name == "nt" else "clear")
+    usuario = sistema_inicio()
+    consola(usuario)
