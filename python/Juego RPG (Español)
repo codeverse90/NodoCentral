@@ -1,0 +1,215 @@
+# CodeVerse Community 
+
+import os
+import json
+import random
+
+SAVE_FILE = "partida_dios.json"
+
+class Jugador:
+    def __init__(self, nombre, nivel=1, xp=0, fuerza=10, vida=100, oro=100, inventario=None, equipo=None, habilidades=None):
+        self.nombre = nombre
+        self.nivel = nivel
+        self.xp = xp
+        self.fuerza = fuerza
+        self.vida_max = 100 + nivel * 10
+        self.vida = vida
+        self.oro = oro
+        self.inventario = inventario if inventario else []
+        self.equipo = equipo if equipo else {"arma": None, "armadura": None}
+        self.habilidades = habilidades if habilidades else []
+
+    def esta_vivo(self):
+        return self.vida > 0
+
+    def atacar(self, enemigo):
+        base = self.fuerza + (self.nivel * 2)
+        arma_bonus = 5 if self.equipo["arma"] == "Espada legendaria" else 0
+        danio = random.randint(base, base + 5 + arma_bonus)
+        print(f"{self.nombre} ataca con fuerza {danio}.")
+        enemigo.vida -= danio
+
+    def usar_habilidad(self, enemigo):
+        if "Golpe explosivo" in self.habilidades and self.nivel >= 3:
+            print(f"🔥 {self.nombre} usa Golpe explosivo!")
+            danio = random.randint(25, 40)
+            enemigo.vida -= danio
+        else:
+            print("❌ No tienes habilidades desbloqueadas.")
+
+    def ganar_xp(self, cantidad):
+        self.xp += cantidad
+        print(f"✨ Ganaste {cantidad} XP.")
+        if self.xp >= self.nivel * 30:
+            self.nivel += 1
+            self.xp = 0
+            self.fuerza += 2
+            self.vida_max += 20
+            self.vida = self.vida_max
+            print(f"\n🆙 Subiste a nivel {self.nivel}! Fuerza y vida aumentadas.")
+            if self.nivel == 3:
+                self.habilidades.append("Golpe explosivo")
+                print("💡 ¡Has aprendido una nueva habilidad: Golpe explosivo!")
+
+    def mostrar_estado(self):
+        print(f"\n🧙 {self.nombre} | Nivel {self.nivel} | Vida: {self.vida}/{self.vida_max} | Fuerza: {self.fuerza} | Oro: {self.oro}")
+        print(f"🎒 Inventario: {', '.join(self.inventario) if self.inventario else 'Vacío'}")
+        print(f"🛡️ Equipo: {self.equipo}")
+        print(f"💫 Habilidades: {', '.join(self.habilidades) if self.habilidades else 'Ninguna'}")
+
+    def curarse(self):
+        if "Poción" in self.inventario:
+            self.vida = min(self.vida + 50, self.vida_max)
+            self.inventario.remove("Poción")
+            print("🧪 Te curaste 50 puntos de vida.")
+        else:
+            print("❌ No tienes pociones.")
+
+class Enemigo:
+    def __init__(self, nombre, vida, fuerza):
+        self.nombre = nombre
+        self.vida = vida
+        self.fuerza = fuerza
+
+    def esta_vivo(self):
+        return self.vida > 0
+
+    def atacar(self, jugador):
+        danio = random.randint(self.fuerza - 3, self.fuerza + 3)
+        print(f"{self.nombre} ataca y causa {danio} de daño.")
+        jugador.vida -= danio
+
+def guardar(jugador):
+    with open(SAVE_FILE, "w") as f:
+        json.dump(jugador.__dict__, f)
+    print("💾 Partida guardada.")
+
+def cargar():
+    if os.path.exists(SAVE_FILE):
+        with open(SAVE_FILE, "r") as f:
+            data = json.load(f)
+            return Jugador(**data)
+    return None
+
+def combate(jugador, enemigo):
+    print(f"\n⚔️ ¡Te enfrentas a {enemigo.nombre}!")
+    while jugador.esta_vivo() and enemigo.esta_vivo():
+        print("\n1. Atacar")
+        print("2. Usar habilidad")
+        print("3. Usar poción")
+        opcion = input("> ")
+        if opcion == "1":
+            jugador.atacar(enemigo)
+        elif opcion == "2":
+            jugador.usar_habilidad(enemigo)
+        elif opcion == "3":
+            jugador.curarse()
+        else:
+            print("❌ Opción inválida.")
+            continue
+        if enemigo.esta_vivo():
+            enemigo.atacar(jugador)
+
+    if jugador.esta_vivo():
+        oro = random.randint(20, 60)
+        jugador.oro += oro
+        jugador.ganar_xp(20)
+        drop = random.choice(["Poción", "Nada", "Espada legendaria"])
+        if drop != "Nada":
+            jugador.inventario.append(drop)
+            print(f"🎁 Encontraste: {drop}")
+        print(f"💰 Ganaste {oro} de oro.")
+    else:
+        print("💀 Has muerto. Fin del juego.")
+        exit()
+
+def tienda(jugador):
+    print("\n🛒 Tienda")
+    catalogo = {"Poción": 30, "Armadura de hierro": 80}
+    while True:
+        print("Escribe nombre del objeto o 'salir'")
+        for item, precio in catalogo.items():
+            print(f"{item} - {precio} oro")
+        opcion = input("> ").title()
+        if opcion == "Salir":
+            break
+        elif opcion in catalogo:
+            if jugador.oro >= catalogo[opcion]:
+                jugador.oro -= catalogo[opcion]
+                if "Armadura" in opcion:
+                    jugador.equipo["armadura"] = opcion
+                else:
+                    jugador.inventario.append(opcion)
+                print(f"✅ Compraste {opcion}")
+            else:
+                print("❌ No tienes suficiente oro.")
+        else:
+            print("❌ No existe ese objeto.")
+
+def mapa(jugador):
+    while True:
+        jugador.mostrar_estado()
+        print("\n🌍 Dónde quieres ir?")
+        print("1. Bosque (enemigos)")
+        print("2. Mazmorra (jefe)")
+        print("3. Ciudad (tienda / descanso)")
+        print("4. Guardar partida")
+        print("5. Salir")
+        opcion = input("> ")
+
+        if opcion == "1":
+            enemigo = Enemigo("Orco", 60 + jugador.nivel * 10, 10 + jugador.nivel)
+            combate(jugador, enemigo)
+        elif opcion == "2":
+            enemigo = Enemigo("Señor Oscuro", 150, 20)
+            combate(jugador, enemigo)
+        elif opcion == "3":
+            print("\n🏘️ Bienvenido a la ciudad.")
+            print("1. Tienda")
+            print("2. Descansar (+vida)")
+            print("3. Volver")
+            sub = input("> ")
+            if sub == "1":
+                tienda(jugador)
+            elif sub == "2":
+                jugador.vida = jugador.vida_max
+                print("💤 Te has recuperado completamente.")
+        elif opcion == "4":
+            guardar(jugador)
+        elif opcion == "5":
+            print("👋 Fin del juego.")
+            break
+        else:
+            print("❌ Opción inválida.")
+
+def menu():
+    while True:
+        print("\n=== CodeVerse Legends ===")
+        print("1. Nueva partida")
+        print("2. Cargar partida")
+        print("3. Créditos")
+        print("4. Salir")
+        opcion = input("> ")
+
+        if opcion == "1":
+            nombre = input("Nombre del héroe: ")
+            jugador = Jugador(nombre)
+            mapa(jugador)
+        elif opcion == "2":
+            jugador = cargar()
+            if jugador:
+                print("✅ Partida cargada.")
+                mapa(jugador)
+            else:
+                print("⚠️ No se encontró ninguna partida.")
+        elif opcion == "3":
+            print("🎮 Juego creado por CodeVerse | Python puro | Terminal RPG")
+        elif opcion == "4":
+            print("👋 Gracias por jugar.")
+            break
+        else:
+            print("❌ Opción inválida.")
+
+if __name__ == "__main__":
+    os.system("cls" if os.name == "nt" else "clear")
+    menu()
