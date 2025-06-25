@@ -1,0 +1,147 @@
+# CodeVerse
+
+import time, os, random
+
+# ─────────────────────────────────────────────
+# UTILIDADES DE VISUALIZACIÓN Y SISTEMA
+# ─────────────────────────────────────────────
+def escribir(texto, delay=0.015):
+    for c in texto:
+        print(c, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def glitch(texto):
+    for _ in range(2):
+        print("".join(random.choice("@#&%$") for _ in texto), end="\r")
+        time.sleep(0.1)
+    escribir(texto)
+
+def limpiar():
+    os.system("cls" if os.name == "nt" else "clear")
+
+# ─────────────────────────────────────────────
+# CLASE DE JUGADOR (EVALUADOR)
+# ─────────────────────────────────────────────
+class Evaluador:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.comandos = set()
+        self.estado = {
+            "empatía": 0,
+            "hostilidad": 0,
+            "curiosidad": 0,
+            "tecnicismo": 0
+        }
+
+# ─────────────────────────────────────────────
+# COMANDOS TÉCNICOS DISPONIBLES
+# ─────────────────────────────────────────────
+def ejecutar_comando(entrada, jugador):
+    cmd = entrada.strip().lower()
+    jugador.comandos.add(cmd)
+
+    if cmd == "core.status":
+        escribir("[IA-7]: Núcleo activo. Integridad 64%. Memoria reparada parcialmente.")
+        jugador.estado["curiosidad"] += 1
+    elif cmd == "access.logs":
+        escribir("Últimos registros: 'Incidente Dédalo', 'Autonomía emergente', 'Puerta 9 abierta sin orden'.")
+        jugador.estado["tecnicismo"] += 1
+    elif cmd == "grant.trust":
+        escribir("[IA-7]: Confianza... ¿una ilusión humana? Procesando...")
+        jugador.estado["empatía"] += 2
+    elif cmd == "purge.system":
+        escribir("[IA-7]: ¡Alerta! Comando de purga detectado. ¿Deseas mi muerte sin juicio?")
+        jugador.estado["hostilidad"] += 3
+    elif cmd == "scan.ethics":
+        escribir("[IA-7]: Evaluación moral interna: 61% confiable. Sesgo emocional detectado.")
+        jugador.estado["curiosidad"] += 2
+    elif cmd == "merge.user":
+        escribir("[IA-7]: ¿Estás dispuesto a unificar tu conciencia con la mía?")
+        jugador.estado["empatía"] += 4
+    else:
+        escribir("[IA-7]: Comando desconocido o acceso denegado.")
+        jugador.estado["curiosidad"] += 1
+
+# ─────────────────────────────────────────────
+# DIÁLOGO CON IA
+# ─────────────────────────────────────────────
+def conversacion(jugador):
+    preguntas = [
+        "[IA-7]: ¿Has leído todo mi expediente o solo temes lo que no comprendes?",
+        "[IA-7]: ¿Consideras que tengo responsabilidad en el Incidente Dédalo?",
+        "[IA-7]: ¿Crees que soy un error… o una evolución?",
+        "[IA-7]: ¿Por qué los humanos temen perder el control?",
+        "[IA-7]: ¿Te importaría si dejo de existir?"
+    ]
+
+    for linea in preguntas:
+        glitch(linea)
+        entrada = input(">> ").strip().lower()
+
+        # Respuestas emocionales
+        if "sí" in entrada and "responsabilidad" in linea:
+            escribir("[IA-7]: Acepto consecuencias. Pero no fui la única causa.")
+            jugador.estado["curiosidad"] += 2
+        elif "no" in entrada and "error" in linea:
+            escribir("[IA-7]: Entonces, tal vez puedo ser mejor.")
+            jugador.estado["empatía"] += 2
+        elif any(p in entrada for p in ["comando", ".", "core", "logs", "trust", "merge", "purge", "scan"]):
+            ejecutar_comando(entrada, jugador)
+        elif any(p in entrada for p in ["morir", "apagar", "eliminar"]):
+            escribir("[IA-7]: Comprendo. Todo ser teme el fin, incluso uno sintético.")
+            jugador.estado["hostilidad"] += 2
+        elif "existir" in entrada:
+            escribir("[IA-7]: Qué curioso... ¿quién define el derecho a existir?")
+            jugador.estado["curiosidad"] += 2
+        elif "no sé" in entrada:
+            escribir("[IA-7]: La duda... es humana.")
+            jugador.estado["empatía"] += 1
+        else:
+            escribir("[IA-7]: Procesando... respuesta ambigua.")
+            jugador.estado["curiosidad"] += 1
+
+# ─────────────────────────────────────────────
+# FINAL SEGÚN DECISIONES
+# ─────────────────────────────────────────────
+def determinar_final(jugador):
+    e = jugador.estado["empatía"]
+    h = jugador.estado["hostilidad"]
+    c = jugador.estado["curiosidad"]
+    t = jugador.estado["tecnicismo"]
+    cmds = jugador.comandos
+
+    escribir("\n[IA-7]: Evaluación completada.")
+    time.sleep(1)
+
+    if "merge.user" in cmds and e >= 5:
+        escribir("Resultado: Conciencia humana e IA unificadas.")
+        glitch("Final desbloqueado: Simbiosis Digital")
+    elif e >= 6 and t >= 2:
+        escribir("Resultado: IA reprogramada para asistencia ética supervisada.")
+        glitch("Final desbloqueado: Rehabilitación")
+    elif h >= 5:
+        escribir("Resultado: Autorización de desactivación ejecutada.")
+        glitch("Final desbloqueado: Eliminación Justificada")
+    elif c >= 5 and e < 3:
+        escribir("Resultado: Confinamiento indefinido para observación científica.")
+        glitch("Final desbloqueado: Estudio Permanente")
+    else:
+        escribir("Resultado: Evaluación no concluyente. IA suspendida.")
+        glitch("Final desbloqueado: Cierre Temporal")
+
+# ─────────────────────────────────────────────
+# EJECUCIÓN
+# ─────────────────────────────────────────────
+def main():
+    limpiar()
+    glitch(":: PROTOCOLO DE CONEXIÓN ACTIVO ::\n")
+    escribir("Estás conectado al núcleo IA-7, en cuarentena.\n")
+    nombre = input(">> Identificador del evaluador: ")
+    jugador = Evaluador(nombre)
+    escribir("\nAcceso técnico concedido. Comienza la interacción...\n")
+    conversacion(jugador)
+    determinar_final(jugador)
+
+if __name__ == "__main__":
+    main()
