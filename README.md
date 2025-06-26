@@ -1,90 +1,75 @@
 <div align="center">
-<!-- Banner Personalizado SVG -->
-<a href="https://codeverseweb.netlify.app/">
-<svg fill="none" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-<rect width="800" height="300" fill="#0D1117" rx="12"/>
-<rect x="10" y="10" width="780" height="280" fill="#161b22" rx="8"/>
-<path d="M -10,80 Q 400,150 810,80" stroke="#3D4A98" stroke-width="4" fill="none" />
-<path d="M -10,220 Q 400,150 810,220" stroke="#3D4A98" stroke-width="4" fill="none" />
-<g>
-<text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif" font-size="72" fill="#FFFFFF" font-weight="bold">
-</CodeVerse>
-</text>
-<text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif" font-size="20" fill="#CDCDCD">
+<h1 align="center" style="font-family:'JetBrains Mono', 'Courier New', monospace; font-weight: 600; font-size: 3.5em; margin-bottom: 0;">
+<span style="color: #3D4A98;"></></span>
+CodeVerse
+</h1>
+<p align="center" style="font-family:'Segoe UI', 'Roboto', sans-serif; font-size: 1.2em; color: #C9D1D9; margin-top: 0.5em;">
 Tu universo para programar, colaborar y crecer.
-</text>
-</g>
-</svg>
-</a>
-<br>
-<!-- Badges de Acceso Rápido -->
-<p align="center">
-<a href="https://discord.gg/jtPDZ4EbXW">
-<img src="https://img.shields.io/badge/Únete_a_Discord-3D4A98?style=for-the-badge&logo=discord&logoColor=white" alt="Badge de Discord">
-</a>
-<a href="https://codeverseweb.netlify.app/">
-<img src="https://img.shields.io/badge/Visita_la_Web-3D4A98?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Badge de la Web">
-</a>
-<a href="https://codeversedocs.netlify.app/">
-<img src="https://img.shields.io/badge/Lee_la_Documentación-3D4A98?style=for-the-badge&logo=readme&logoColor=white" alt="Badge de la Documentación">
-</a>
 </p>
-</div>
-<p align="center">Somos una comunidad apasionada por la tecnología, donde cada línea de código cuenta.</p>
-
----
-
- ¿Qué es CodeVerse?
-CodeVerse es un ecosistema para entusiastas de la tecnología de todos los niveles. Nuestra misión es construir un espacio abierto y colaborativo donde puedas aprender, crear y crecer junto a otros desarrolladores. Creemos en el poder del código abierto y en la fuerza de una comunidad unida.
-🌐 Nuestros Recursos Principales
-<div align="center">
-<table >
-<tr>
-<td align="center" width="33%">
-<a href="https://codeverseweb.netlify.app/">
-<img src="https://img.icons8.com/color/96/000000/domain.png" alt="Icono de página web"/>
-<br>
-<strong>Web de la Comunidad</strong>
-</a>
-</td>
-<td align="center" width="33%">
+<p align="center">
+<a href="https://discord.gg/jtPDZ4EbXW"><img src="https://img.shields.io/badge/Discord-ÚNETE-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Enlace a Discord"></a>
+<a href="https://codeverseweb.netlify.app/"><img src="https://img.shields.io/badge/Web-VISITAR-3D4A98?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Enlace a la Web"></a>
+<a href="https://github.com/CodeVerse-Community"><img src="https://img.shields.io/badge/GitHub-SEGUIR-181717?style=flat-square&logo=github&logoColor=white" alt="Enlace a GitHub"></a>
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/PKief/PKief/master/images/divider.gif" alt="Divisor animado">
+</p>
+<h3 align="center" style="color:#3D4A98;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; color: #3D4A98;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+<span style="vertical-align: middle; margin-left: 8px;">Nuestro Ecosistema</span>
+</h3>
+<table align="center" border="0" cellpadding="15" cellspacing="0" width="80%">
+<tr align="center">
+<td valign="top" width="33%">
+<h4><strong>Documentación y Guías</strong></h4>
+<p style="color:#8B949E;">Tutoriales y guías centralizadas para impulsar tu aprendizaje continuo.</p>
 <a href="https://codeversedocs.netlify.app/">
-<img src="https://img.icons8.com/color/96/000000/books.png" alt="Icono de libros para documentación"/>
-<br>
-<strong>Guías y Documentos</strong>
+<img src="https://img.shields.io/badge/Consultar_Docs-3D4A98?style=flat-square" alt="Botón de Documentación">
 </a>
 </td>
-<td align="center" width="33%">
+<td valign="top" width="33%">
+<h4><strong>Web Principal</strong></h4>
+<p style="color:#8B949E;">El núcleo de nuestra comunidad. Aquí encontrarás todo sobre nosotros.</p>
+<a href="https://codeverseweb.netlify.app/">
+<img src="https://img.shields.io/badge/Visitar_Web-3D4A98?style=flat-square" alt="Botón de la Web">
+</a>
+</td>
+<td valign="top" width="33%">
+<h4><strong>Cheatsheets</strong></h4>
+<p style="color:#8B949E;">Referencias rápidas y concisas para tus herramientas y lenguajes favoritos.</p>
 <a href="https://codeversecheatsheet.netlify.app/">
-<img src="https://img.icons8.com/color/96/000000/task.png" alt="Icono de hoja de tareas para cheatsheets"/>
-<br>
-<strong>Cheatsheets</strong>
+<img src="https://img.shields.io/badge/Ver_Cheatsheets-3D4A98?style=flat-square" alt="Botón de Cheatsheets">
 </a>
 </td>
 </tr>
 </table>
-</div>
-
----
-
- ¿Cómo Puedes Contribuir?
-¡Tu aporte es muy valioso! Si quieres ser parte activa de CodeVerse, aquí tienes algunas ideas:
- * Proyectos: Elige un proyecto de nuestros repositorios, clónalo y empieza a programar.
- * Issues: Revisa las issues abiertas. Resolver un bug o proponer una mejora es una gran ayuda.
- * Pull Requests: Envía tus Pull Requests con nuevas funcionalidades o correcciones. ¡Serán revisadas por la comunidad!
- * Soporte: Ayuda a otros miembros en nuestro servidor de Discord resolviendo sus dudas.
-💻 Tecnologías que Impulsan Nuestra Galaxia
-Nos encanta trabajar con una amplia variedad de herramientas. Aquí algunas de nuestras favoritas:
 <p align="center">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+<img src="https://raw.githubusercontent.com/PKief/PKief/master/images/divider.gif" alt="Divisor animado">
 </p>
-<div align="center">
+<h3 align="center" style="color:#3D4A98;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; color: #3D4A98;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+<span style="vertical-align: middle; margin-left: 8px;">Conviértete en Colaborador</span>
+</h3>
+<p align="center" style="color:#8B949E;">
+El código abierto es el ADN de CodeVerse. ¡Tu contribución es lo que nos hace grandes!
+</p>
+<p align="center">
+<a href="https://github.com/CodeVerse-Community/CodeVerse-Community/blob/main/CONTRIBUTING.md">
+<img src="https://img.shields.io/badge/Guía_de_Contribución-LEER-3D4A98?style=flat-square" alt="Guía de Contribución">
+</a>
+</p>
+<h3 align="center" style="color:#3D4A98;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; color: #3D4A98;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+<span style="vertical-align: middle; margin-left: 8px;">Agradecimientos</span>
+</h3>
+<p align="center" style="color:#8B949E;">Un enorme gracias a todos los que han aportado su talento a nuestros proyectos.</p>
+<p align="center">
+<a href="https://github.com/CodeVerse-Community/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=CodeVerse-Community/CodeVerse-Community" alt="Colaboradores de la comunidad"/>
+</a>
+</p>
 <br>
-<p><strong>¡Gracias por visitarnos y esperamos verte programando en el CodeVerse!</strong></p>
+<p align="center" style="color:#8B949E; font-size: 12px;">
+CodeVerse Community © 2024
+</p>
 </div>
