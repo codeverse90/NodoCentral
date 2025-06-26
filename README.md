@@ -31,7 +31,10 @@ Tu universo para programar, colaborar y crecer.
 </p>
 </div>
 <p align="center">Somos una comunidad apasionada por la tecnología, donde cada línea de código cuenta.</p>
-🚀 ¿Qué es CodeVerse?
+
+---
+
+ ¿Qué es CodeVerse?
 CodeVerse es un ecosistema para entusiastas de la tecnología de todos los niveles. Nuestra misión es construir un espacio abierto y colaborativo donde puedas aprender, crear y crecer junto a otros desarrolladores. Creemos en el poder del código abierto y en la fuerza de una comunidad unida.
 🌐 Nuestros Recursos Principales
 <div align="center">
