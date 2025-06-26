@@ -26,6 +26,6 @@ Somos una comunidad apasionada por la tecnología, el desarrollo y el código.
 <br>
 <!-- Pie de página -->
 <p align="center" style="color:#8B949E; font-size: 12px;">
-CodeVerse Community © 2024
+CodeVerse Community © 2025
 </p>
 </div>
