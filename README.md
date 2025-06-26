@@ -64,7 +64,10 @@ CodeVerse es un ecosistema para entusiastas de la tecnología de todos los nivel
 </tr>
 </table>
 </div>
-🛠️ ¿Cómo Puedes Contribuir?
+
+---
+
+ ¿Cómo Puedes Contribuir?
 ¡Tu aporte es muy valioso! Si quieres ser parte activa de CodeVerse, aquí tienes algunas ideas:
  * Proyectos: Elige un proyecto de nuestros repositorios, clónalo y empieza a programar.
  * Issues: Revisa las issues abiertas. Resolver un bug o proponer una mejora es una gran ayuda.
