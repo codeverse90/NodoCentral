@@ -132,4 +132,5 @@ Esta lista recopila **hojas de referencia rápida (cheatsheets)** para tecnolog�
     - Configuración de servidores web, proxies y load balancing.  
 
 ---  
-**Nota**: Todos los enlaces están verificados y dirigidos a recursos oficiales o ampliamente utilizados por la comunidad. Ideal para desarrolladores, diseñadores y DevOps.
+ 
+### CodeVerse Community 
