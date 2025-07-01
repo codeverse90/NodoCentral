@@ -1,5 +1,5 @@
 ### **Descripción General**  
-Esta lista recopila **hojas de referencia rápida (cheatsheets)** para tecnologías clave en desarrollo web, programación, bases de datos, herramientas de diseño y sistemas. Son recursos útiles para consultar sintaxis, comandos y conceptos esenciales de manera rápida.  
+> Esta lista recopila **hojas de referencia rápida (cheatsheets)** para tecnologías clave en desarrollo web, programación, bases de datos, herramientas de diseño y sistemas. Son recursos útiles para consultar sintaxis, comandos y conceptos esenciales de manera rápida.  
 
 ---  
 
