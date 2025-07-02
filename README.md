@@ -1,4 +1,3 @@
-# • CodeVerse
 
 <div align="center">
   
