@@ -1,0 +1,121 @@
+# CodeVerse
+
+import random
+
+
+class Cell:
+    def __init__(self):
+        self.is_mine = False
+        self.is_open = False
+        self.is_flagged = False
+        self.adjacent_mines = 0
+
+
+class Minesweeper:
+    def __init__(self, rows=5, cols=5, mines=5):
+        self.rows = rows
+        self.cols = cols
+        self.mines = mines
+        self.board = [[Cell() for _ in range(cols)] for _ in range(rows)]
+        self._place_mines()
+        self._calculate_adjacent()
+
+    def _place_mines(self):
+        count = 0
+        while count < self.mines:
+            r = random.randint(0, self.rows - 1)
+            c = random.randint(0, self.cols - 1)
+            if not self.board[r][c].is_mine:
+                self.board[r][c].is_mine = True
+                count += 1
+
+    def _calculate_adjacent(self):
+        for r in range(self.rows):
+            for c in range(self.cols):
+                if self.board[r][c].is_mine:
+                    continue
+                self.board[r][c].adjacent_mines = sum(
+                    1
+                    for i in range(max(0, r - 1), min(self.rows, r + 2))
+                    for j in range(max(0, c - 1), min(self.cols, c + 2))
+                    if self.board[i][j].is_mine
+                )
+
+    def _expand(self, r, c):
+        if (
+            r < 0 or r >= self.rows or
+            c < 0 or c >= self.cols or
+            self.board[r][c].is_open or
+            self.board[r][c].is_mine
+        ):
+            return
+        self.board[r][c].is_open = True
+        if self.board[r][c].adjacent_mines == 0:
+            for i in range(r - 1, r + 2):
+                for j in range(c - 1, c + 2):
+                    if i == r and j == c:
+                        continue
+                    self._expand(i, j)
+
+    def open_cell(self, r, c):
+        if self.board[r][c].is_mine:
+            return False  # Game Over
+        self._expand(r, c)
+        return True
+
+    def is_won(self):
+        for row in self.board:
+            for cell in row:
+                if not cell.is_mine and not cell.is_open:
+                    return False
+        return True
+
+    def display(self):
+        print("\n   " + " ".join([str(c) for c in range(self.cols)]))
+        for idx, row in enumerate(self.board):
+            line = f"{idx} "
+            for cell in row:
+                if cell.is_open:
+                    if cell.is_mine:
+                        line += " *"
+                    elif cell.adjacent_mines > 0:
+                        line += f" {cell.adjacent_mines}"
+                    else:
+                        line += " ."
+                else:
+                    line += " #"
+            print(line)
+
+
+def main():
+    print("🧨 Bienvenido a Buscaminas en Consola")
+    game = Minesweeper(rows=5, cols=5, mines=5)
+
+    while True:
+        game.display()
+        try:
+            entrada = input("Selecciona celda (fila,columna) o 'salir': ")
+            if entrada.lower() == "salir":
+                print("👋 Gracias por jugar.")
+                break
+
+            fila, columna = map(int, entrada.split(","))
+            if fila < 0 or columna < 0:
+                print("❌ Coordenadas inválidas.")
+                continue
+
+            if not game.open_cell(fila, columna):
+                game.display()
+                print("💥 ¡Boom! Has perdido.")
+                break
+
+            if game.is_won():
+                game.display()
+                print("🎉 ¡Felicidades! Has ganado.")
+                break
+
+        except ValueError:
+            print("❌ Entrada inválida. Usa formato: fila,columna")
+
+if __name__ == "__main__":
+    main()
