@@ -1107,6 +1107,8 @@ npm run analyze          # Analiza el tamaño del bundle
 # Otros
 npm run clean            # Limpia el proyecto de archivos generados
 npm run deps:update      # Actualiza las dependencias interactivamente
+```
+---
 
 Reconocimientos
 Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
