@@ -303,5 +303,5 @@ Al unirte a CodeVerse, formas parte de un ecosistema diseñado para:
 
 Invitamos a desarrolladores de todos los niveles a sumarse a esta iniciativa, donde el código trasciende su función técnica para convertirse en herramienta de transformación profesional y comunitaria.
 
-*"Juntos, no solo escribimos código - escribimos el futuro de nuestra industria."*
+> *"Juntos, no solo escribimos código - escribimos el futuro de nuestra industria."*
  
