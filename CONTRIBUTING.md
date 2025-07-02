@@ -1094,4 +1094,27 @@ npm run test:debug       # Tests con debugging
 npm run test:e2e         # Tests end-to-end
 
 # Linting y Formateo
-npm run lint             # ESLint
+npm run lint             # Ejecuta ESLint para encontrar errores
+npm run lint:fix         # Intenta corregir errores de ESLint
+npm run format           # Formatea el código con Prettier
+npm run format:check     # Verifica si el código está formateado
+
+# Build
+npm run build            # Build para producción
+npm run build:staging    # Build para ambiente de staging
+npm run analyze          # Analiza el tamaño del bundle
+
+# Otros
+npm run clean            # Limpia el proyecto de archivos generados
+npm run deps:update      # Actualiza las dependencias interactivamente
+
+Reconocimientos
+Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
+Para reconocer todas las formas de contribución, utilizamos la especificación All Contributors. ¡Invitamos a todos a unirse a la lista!
+<table>
+<tbody>
+<tr>
+<td align="center" valign="top" width="14.28%"><a href="https://www.google.com/search?q=https://github.com/tu-usuario"><img src="https://www.google.com/search?q=https://avatars.githubusercontent.com/u/1234567%3Fv%3D4%3Fs%3D100" width="100px;" alt="Tu Nombre"/><br /><sub><b>Tu Nombre</b></sub></a><br /><a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Code">💻</a> <a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Documentation">📖</a> <a href="#design-tu-usuario" title="Design">🎨</a></td>
+</tr>
+</tbody>
+</table>
