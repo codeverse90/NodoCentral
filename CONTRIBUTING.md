@@ -1,4 +1,4 @@
-
+# **CONTRIBUTING.md**
 
 <div align="center">
 
@@ -62,14 +62,18 @@ Si eres nuevo en contribuciones de código abierto, revisa estos recursos:
 
 Asegúrate de tener instalado:
 
+```bash
 # Versiones mínimas requeridas
 Node.js >= 18.0.0
 npm >= 8.0.0
 Git >= 2.30.0
+```
 
-Instalación Local
+### **Instalación Local**
+
+```bash
 # 1. Fork el repositorio y clónalo
-git clone [https://github.com/tu-usuario/nombre-proyecto.git](https://github.com/tu-usuario/nombre-proyecto.git)
+git clone https://github.com/tu-usuario/nombre-proyecto.git
 cd nombre-proyecto
 
 # 2. Instala las dependencias
@@ -86,17 +90,24 @@ npm run dev
 
 # 6. Ejecuta los tests para verificar que todo funciona
 npm test
+```
 
-Configuración de IDE
-VS Code (Recomendado)
+### **Configuración de IDE**
+
+#### **VS Code (Recomendado)**
+
 Instala las siguientes extensiones:
- * ESLint - Linting de JavaScript/TypeScript
- * Prettier - Formateo de código
- * GitLens - Mejor integración con Git
- * Auto Rename Tag - Renombrado automático de tags HTML
- * Bracket Pair Colorizer - Coloreo de brackets
- * IntelliCode - Sugerencias de código con IA
-Configuración de Settings.json
+
+- **ESLint** - Linting de JavaScript/TypeScript
+- **Prettier** - Formateo de código
+- **GitLens** - Mejor integración con Git
+- **Auto Rename Tag** - Renombrado automático de tags HTML
+- **Bracket Pair Colorizer** - Coloreo de brackets
+- **IntelliCode** - Sugerencias de código con IA
+
+#### **Configuración de Settings.json**
+
+```json
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -107,10 +118,17 @@ Configuración de Settings.json
     "javascript": "javascriptreact"
   }
 }
+```
 
-Tipos de Contribuciones
-Bug Reports
-Usa el template de Bug Report cuando encuentres un error:
+---
+
+## **Tipos de Contribuciones**
+
+### **Bug Reports**
+
+Usa el template de **Bug Report** cuando encuentres un error:
+
+```markdown
 **Descripción del Bug**
 Descripción clara y concisa del problema.
 
@@ -130,9 +148,13 @@ Si es aplicable, agrega screenshots.
 - OS: [e.g. macOS, Windows, Linux]
 - Browser: [e.g. Chrome, Firefox, Safari]
 - Version: [e.g. 22]
+```
 
-Feature Requests
-Usa el template de Feature Request para proponer nuevas características:
+### **Feature Requests**
+
+Usa el template de **Feature Request** para proponer nuevas características:
+
+```markdown
 **¿Tu feature request está relacionado con un problema?**
 Descripción clara y concisa del problema.
 
@@ -144,30 +166,44 @@ Descripción clara y concisa de soluciones alternativas.
 
 **Contexto adicional**
 Agrega cualquier otro contexto o screenshots sobre el feature request.
+```
 
-Documentación
- * Correcciones de typos
- * Mejoras en la claridad
- * Ejemplos adicionales
- * Traducciones
- * Actualización de dependencias
-Código
- * Hotfixes: Correcciones críticas
- * Features: Nuevas funcionalidades
- * Refactoring: Mejoras en el código existente
- * Performance: Optimizaciones
- * Security: Mejoras de seguridad
-Flujo de Trabajo con Git
-Branching Strategy
-Utilizamos GitFlow modificado:
+### **Documentación**
+
+- Correcciones de typos
+- Mejoras en la claridad
+- Ejemplos adicionales
+- Traducciones
+- Actualización de dependencias
+
+### **Código**
+
+- **Hotfixes**: Correcciones críticas
+- **Features**: Nuevas funcionalidades
+- **Refactoring**: Mejoras en el código existente
+- **Performance**: Optimizaciones
+- **Security**: Mejoras de seguridad
+
+---
+
+## **Flujo de Trabajo con Git**
+
+### **Branching Strategy**
+
+Utilizamos **GitFlow** modificado:
+
+```
 main
 ├── develop
 │   ├── feature/nueva-funcionalidad
 │   ├── feature/mejora-ui
 │   └── hotfix/correccion-critica
 └── release/v1.2.0
+```
 
-Convención de Nombres de Ramas
+### **Convención de Nombres de Ramas**
+
+```bash
 # Features
 feature/nombre-descriptivo
 feature/login-social
@@ -181,8 +217,11 @@ hotfix/security-patch
 # Releases
 release/v1.2.0
 release/v2.0.0-beta
+```
 
-Workflow Completo
+### **Workflow Completo**
+
+```bash
 # 1. Actualiza tu fork
 git checkout develop
 git pull upstream develop
@@ -199,9 +238,13 @@ git push origin feature/nueva-funcionalidad
 
 # 5. Crea un Pull Request
 # Usa la interfaz web de GitHub
+```
 
-Convenciones de Commit
-Seguimos Conventional Commits:
+### **Convenciones de Commit**
+
+Seguimos **Conventional Commits**:
+
+```bash
 # Tipos de commit
 feat:     nueva funcionalidad
 fix:      corrección de bug
@@ -219,8 +262,11 @@ git commit -m "style: format code with prettier"
 git commit -m "refactor: improve error handling"
 git commit -m "test: add unit tests for auth service"
 git commit -m "chore: update dependencies"
+```
 
-Mensajes de Commit Detallados
+### **Mensajes de Commit Detallados**
+
+```bash
 # Formato completo
 tipo(scope): descripción corta
 
@@ -232,16 +278,23 @@ no cómo.
 
 Fixes #123
 Closes #456
+```
 
-Estándares de Código
-JavaScript/TypeScript
-Naming Conventions
+---
+
+## **Estándares de Código**
+
+### **JavaScript/TypeScript**
+
+#### **Naming Conventions**
+
+```javascript
 // Variables y funciones: camelCase
 const userName = 'john_doe';
 const calculateTotalPrice = () => {};
 
 // Constantes: UPPER_SNAKE_CASE
-const API_BASE_URL = '[https://api.example.com](https://api.example.com)';
+const API_BASE_URL = 'https://api.example.com';
 const MAX_RETRY_ATTEMPTS = 3;
 
 // Clases: PascalCase
@@ -255,8 +308,11 @@ interface IApiResponse {}
 // Tipos (TypeScript): PascalCase
 type UserRole = 'admin' | 'user' | 'guest';
 type ApiStatus = 'loading' | 'success' | 'error';
+```
 
-Estructura de Archivos
+#### **Estructura de Archivos**
+
+```javascript
 // Orden de imports
 // 1. Node modules
 import React from 'react';
@@ -271,8 +327,11 @@ import './Component.css';
 
 // 4. Types (al final)
 import type { UserData, ApiResponse } from '../types';
+```
 
-Funciones
+#### **Funciones**
+
+```javascript
 // Función pura preferida
 const calculateTotal = (items: Item[]): number => {
   return items.reduce((sum, item) => sum + item.price, 0);
@@ -292,9 +351,13 @@ const calculateTotalWithDiscount = (
   const total = calculateTotal(items);
   return total * (1 - discount);
 };
+```
 
-React Components
-Functional Components
+### **React Components**
+
+#### **Functional Components**
+
+```typescript
 // Componente funcional con TypeScript
 interface UserCardProps {
   user: User;
@@ -328,8 +391,11 @@ const UserCard: React.FC<UserCardProps> = ({
 };
 
 export default UserCard;
+```
 
-Custom Hooks
+#### **Custom Hooks**
+
+```typescript
 // Custom hook para manejo de estado
 const useUserData = (userId: string) => {
   const [user, setUser] = useState<User | null>(null);
@@ -358,9 +424,13 @@ const useUserData = (userId: string) => {
 
   return { user, loading, error };
 };
+```
 
-CSS/SCSS
-Nomenclatura BEM
+### **CSS/SCSS**
+
+#### **Nomenclatura BEM**
+
+```scss
 // Block Element Modifier
 .user-card {
   padding: 1rem;
@@ -393,8 +463,11 @@ Nomenclatura BEM
     pointer-events: none;
   }
 }
+```
 
-Variables CSS
+#### **Variables CSS**
+
+```scss
 // Variables globales
 :root {
   // Colores
@@ -424,10 +497,17 @@ Variables CSS
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
+```
 
-Testing y Calidad
-Tipos de Tests
-Unit Tests
+---
+
+## **Testing y Calidad**
+
+### **Tipos de Tests**
+
+#### **Unit Tests**
+
+```typescript
 // user.service.test.ts
 import { UserService } from '../UserService';
 import { mockUser, mockApiResponse } from '../__mocks__/user.mocks';
@@ -462,8 +542,11 @@ describe('UserService', () => {
     });
   });
 });
+```
 
-Integration Tests
+#### **Integration Tests**
+
+```typescript
 // user-card.integration.test.tsx
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { UserCard } from '../UserCard';
@@ -494,8 +577,11 @@ describe('UserCard Integration', () => {
     expect(mockOnEdit).toHaveBeenCalledWith(mockUser);
   });
 });
+```
 
-E2E Tests
+#### **E2E Tests**
+
+```typescript
 // user-management.e2e.test.ts
 import { test, expect } from '@playwright/test';
 
@@ -529,14 +615,18 @@ test.describe('User Management', () => {
     await expect(page.locator('[data-testid="user-list"]')).not.toContainText('Updated User');
   });
 });
+```
 
-Configuración de Testing
-Jest Configuration
+### **Configuración de Testing**
+
+#### **Jest Configuration**
+
+```javascript
 // jest.config.js
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapper: {
+  moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
@@ -559,8 +649,11 @@ module.exports = {
     '<rootDir>/src/**/*.{test,spec}.{ts,tsx}',
   ],
 };
+```
 
-Comandos de Testing
+### **Comandos de Testing**
+
+```bash
 # Ejecutar todos los tests
 npm test
 
@@ -582,9 +675,15 @@ npm run test:e2e
 # Ejecutar tests específicos
 npm test -- --testNamePattern="UserService"
 npm test -- --testPathPattern="user"
+```
 
-Documentación
-JSDoc
+---
+
+## **Documentación**
+
+### **JSDoc**
+
+```typescript
 /**
  * Servicio para manejo de usuarios
  * @class UserService
@@ -617,9 +716,13 @@ class UserService {
     // Implementation
   }
 }
+```
 
-README Sections
+### **README Sections**
+
 Cada componente/módulo debe tener documentación:
+
+```markdown
 # UserCard Component
 
 ## Descripción
@@ -637,19 +740,22 @@ Componente para mostrar información de usuario con capacidades de edición.
 ### Básico
 ```tsx
 <UserCard user={userData} />
+```
 
-Con edición
+### Con edición
+```tsx
 <UserCard 
   user={userData} 
   isEditable 
   onEdit={(user) => console.log('Editing:', user)} 
 />
+```
 
-Notas
- * El componente maneja automáticamente los estados de loading
- * Implementa lazy loading para imágenes de perfil
- * Compatible con temas dark/light
-<!-- end list -->
+## Notas
+- El componente maneja automáticamente los estados de loading
+- Implementa lazy loading para imágenes de perfil
+- Compatible con temas dark/light
+```
 
 ### **Changelog**
 
@@ -684,36 +790,49 @@ Notas
 ### Security
 - Actualizado el sistema de autenticación
 - Parcheadas las vulnerabilidades de seguridad
+```
 
-Proceso de Code Review
-Checklist del Reviewer
-Funcionalidad
- * [ ] El código hace lo que debe hacer
- * [ ] Los edge cases están cubiertos
- * [ ] No hay lógica duplicada
- * [ ] Los errores se manejan apropiadamente
-Código
- * [ ] El código es limpio y legible
- * [ ] Las variables tienen nombres descriptivos
- * [ ] Las funciones son pequeñas y enfocadas
- * [ ] Se siguen los patrones establecidos
-Performance
- * [ ] No hay bucles innecesarios
- * [ ] Las consultas a la base de datos son eficientes
- * [ ] Se usan lazy loading donde es apropiado
- * [ ] La memoria se libera correctamente
-Seguridad
- * [ ] Los inputs están validados
- * [ ] No hay información sensible expuesta
- * [ ] Se usan HTTPS y tokens seguros
- * [ ] Las dependencias están actualizadas
-Testing
- * [ ] Los tests existentes pasan
- * [ ] Se agregaron tests para nuevo código
- * [ ] El coverage es adecuado
- * [ ] Los tests son significativos
-Tipos de Comentarios
-Comentarios Constructivos
+---
+
+## **Proceso de Code Review**
+
+### **Checklist del Reviewer**
+
+#### **Funcionalidad**
+- [ ] El código hace lo que debe hacer
+- [ ] Los edge cases están cubiertos
+- [ ] No hay lógica duplicada
+- [ ] Los errores se manejan apropiadamente
+
+#### **Código**
+- [ ] El código es limpio y legible
+- [ ] Las variables tienen nombres descriptivos
+- [ ] Las funciones son pequeñas y enfocadas
+- [ ] Se siguen los patrones establecidos
+
+#### **Performance**
+- [ ] No hay bucles innecesarios
+- [ ] Las consultas a la base de datos son eficientes
+- [ ] Se usan lazy loading donde es apropiado
+- [ ] La memoria se libera correctamente
+
+#### **Seguridad**
+- [ ] Los inputs están validados
+- [ ] No hay información sensible expuesta
+- [ ] Se usan HTTPS y tokens seguros
+- [ ] Las dependencias están actualizadas
+
+#### **Testing**
+- [ ] Los tests existentes pasan
+- [ ] Se agregaron tests para nuevo código
+- [ ] El coverage es adecuado
+- [ ] Los tests son significativos
+
+### **Tipos de Comentarios**
+
+#### **Comentarios Constructivos**
+
+```markdown
 # ✅ Bueno
 "Considera usar `useMemo` aquí para optimizar el rendering cuando `items` es grande."
 
@@ -725,8 +844,11 @@ Comentarios Constructivos
 
 # ❌ Evitar
 "No me gusta este approach."
+```
 
-Prioridades de Comentarios
+#### **Prioridades de Comentarios**
+
+```markdown
 # 🔴 MUST FIX - Bloquea el merge
 - Bugs de seguridad
 - Funcionalidad rota
@@ -741,14 +863,22 @@ Prioridades de Comentarios
 - Optimizaciones menores
 - Preferencias de estilo
 - Ideas para el futuro
+```
 
-Proceso de Approval
- * Auto-review: El autor revisa su propio código
- * Peer review: Al menos 2 reviewers aprueban
- * Automated checks: Tests y linting pasan
- * Final approval: Lead developer da el visto bueno
-Despliegue y CI/CD
-Pipeline de CI/CD
+### **Proceso de Approval**
+
+1. **Auto-review**: El autor revisa su propio código
+2. **Peer review**: Al menos 2 reviewers aprueban
+3. **Automated checks**: Tests y linting pasan
+4. **Final approval**: Lead developer da el visto bueno
+
+---
+
+## **Despliegue y CI/CD**
+
+### **Pipeline de CI/CD**
+
+```yaml
 # .github/workflows/ci-cd.yml
 name: CI/CD Pipeline
 
@@ -813,8 +943,11 @@ jobs:
     steps:
     - name: Deploy to production
       run: echo "Deploying to production..."
+```
 
-Ambientes
+### **Ambientes**
+
+```bash
 # Desarrollo
 npm run dev
 # http://localhost:3000
@@ -822,14 +955,17 @@ npm run dev
 # Staging
 npm run build:staging
 npm run deploy:staging
-# [https://staging.example.com](https://staging.example.com)
+# https://staging.example.com
 
 # Production
 npm run build:production
 npm run deploy:production
-# [https://example.com](https://example.com)
+# https://example.com
+```
 
-Monitoreo y Logs
+### **Monitoreo y Logs**
+
+```typescript
 // logger.ts
 import winston from 'winston';
 
@@ -853,30 +989,48 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export default logger;
+```
 
-Comunidad y Comunicación
-Canales de Comunicación
- * GitHub Issues: Para bugs y feature requests
- * GitHub Discussions: Para preguntas generales
- * Discord: Para chat en tiempo real
- * Email: Para temas privados o sensibles
-Meetings y Eventos
- * Daily Standups: Lunes a Viernes 9:00 AM
- * Code Review Sessions: Martes y Jueves 2:00 PM
- * Sprint Planning: Primer lunes de cada mes
- * Tech Talks: Viernes 4:00 PM (opcional)
-Onboarding para Nuevos Contributors
- * Semana 1: Configuración del entorno y primeros issues
- * Semana 2: Primer PR y code review
- * Semana 3: Feature mediana y pair programming
- * Semana 4: Evaluación y feedback
-Mentorship Program
- * Mentores disponibles: Lista de contributors experimentados
- * Programa de buddy: Asignación de mentor para nuevos contributors
- * Sesiones de pair programming: Semanales para aprendizaje
-Troubleshooting
-Problemas Comunes
-Error: Cannot resolve module
+---
+
+## **Comunidad y Comunicación**
+
+### **Canales de Comunicación**
+
+- **GitHub Issues**: Para bugs y feature requests
+- **GitHub Discussions**: Para preguntas generales
+- **Discord**: Para chat en tiempo real
+- **Email**: Para temas privados o sensibles
+
+### **Meetings y Eventos**
+
+- **Daily Standups**: Lunes a Viernes 9:00 AM
+- **Code Review Sessions**: Martes y Jueves 2:00 PM
+- **Sprint Planning**: Primer lunes de cada mes
+- **Tech Talks**: Viernes 4:00 PM (opcional)
+
+### **Onboarding para Nuevos Contributors**
+
+1. **Semana 1**: Configuración del entorno y primeros issues
+2. **Semana 2**: Primer PR y code review
+3. **Semana 3**: Feature mediana y pair programming
+4. **Semana 4**: Evaluación y feedback
+
+### **Mentorship Program**
+
+- **Mentores disponibles**: Lista de contributors experimentados
+- **Programa de buddy**: Asignación de mentor para nuevos contributors
+- **Sesiones de pair programming**: Semanales para aprendizaje
+
+---
+
+## **Troubleshooting**
+
+### **Problemas Comunes**
+
+#### **Error: Cannot resolve module**
+
+```bash
 # Limpiar cache y reinstalar
 rm -rf node_modules package-lock.json
 npm install
@@ -884,8 +1038,11 @@ npm install
 # Verificar versiones
 node --version
 npm --version
+```
 
-Tests fallando después de cambios
+#### **Tests fallando después de cambios**
+
+```bash
 # Limpiar cache de Jest
 npm test -- --clearCache
 
@@ -894,8 +1051,11 @@ npm test -- --updateSnapshot
 
 # Ejecutar tests específicos
 npm test -- --testNamePattern="UserService"
+```
 
-Build fallando en producción
+#### **Build fallando en producción**
+
+```bash
 # Verificar variables de entorno
 cat .env.production
 
@@ -904,8 +1064,11 @@ npm run build -- --verbose
 
 # Verificar bundle size
 npm run analyze
+```
 
-Problemas de Performance
+#### **Problemas de Performance**
+
+```bash
 # Analizar bundle
 npm run analyze
 
@@ -914,8 +1077,11 @@ npm run dev
 
 # Lighthouse audit
 npm run lighthouse
+```
 
-Comandos Útiles
+### **Comandos Útiles**
+
+```bash
 # Desarrollo
 npm run dev              # Servidor de desarrollo
 npm run dev:debug        # Desarrollo con debugging
@@ -928,28 +1094,4 @@ npm run test:debug       # Tests con debugging
 npm run test:e2e         # Tests end-to-end
 
 # Linting y Formateo
-npm run lint             # Ejecuta ESLint para encontrar errores
-npm run lint:fix         # Intenta corregir errores de ESLint
-npm run format           # Formatea el código con Prettier
-npm run format:check     # Verifica si el código está formateado
-
-# Build
-npm run build            # Build para producción
-npm run build:staging    # Build para ambiente de staging
-npm run analyze          # Analiza el tamaño del bundle
-
-# Otros
-npm run clean            # Limpia el proyecto de archivos generados
-npm run deps:update      # Actualiza las dependencias interactivamente
-
-Reconocimientos
-Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
-Para reconocer todas las formas de contribución, utilizamos la especificación All Contributors. ¡Invitamos a todos a unirse a la lista!
-<table>
-<tbody>
-<tr>
-<td align="center" valign="top" width="14.28%"><a href="https://www.google.com/search?q=https://github.com/tu-usuario"><img src="https://www.google.com/search?q=https://avatars.githubusercontent.com/u/1234567%3Fv%3D4%3Fs%3D100" width="100px;" alt="Tu Nombre"/><br /><sub><b>Tu Nombre</b></sub></a><br /><a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Code">💻</a> <a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Documentation">📖</a> <a href="#design-tu-usuario" title="Design">🎨</a></td>
-</tr>
-</tbody>
-</table>
-
+npm run lint             # ESLint
