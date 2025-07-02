@@ -1110,13 +1110,7 @@ npm run deps:update      # Actualiza las dependencias interactivamente
 ```
 ---
 
-Reconocimientos
-Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
-Para reconocer todas las formas de contribución, utilizamos la especificación All Contributors. ¡Invitamos a todos a unirse a la lista!
-<table>
-<tbody>
-<tr>
-<td align="center" valign="top" width="14.28%"><a href="https://www.google.com/search?q=https://github.com/tu-usuario"><img src="https://www.google.com/search?q=https://avatars.githubusercontent.com/u/1234567%3Fv%3D4%3Fs%3D100" width="100px;" alt="Tu Nombre"/><br /><sub><b>Tu Nombre</b></sub></a><br /><a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Code">💻</a> <a href="https://www.google.com/search?q=https://github.com/nombre-proyecto/commits%3Fauthor%3Dtu-usuario" title="Documentation">📖</a> <a href="#design-tu-usuario" title="Design">🎨</a></td>
-</tr>
-</tbody>
-</table>
+### Reconocimientos
+> Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
+
+ • Atte: `CodeVerse`
