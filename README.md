@@ -25,34 +25,6 @@
 
 ---
 
-## Tabla de Contenidos
-
-- [Acerca de CodeVerse](#acerca-de-codeverse)
-- [Misión y Visión](#misión-y-visión)
-- [Valores Fundamentales](#valores-fundamentales)
-- [Características de la Comunidad](#características-de-la-comunidad)
-- [Stack Tecnológico](#stack-tecnológico)
-- [Primeros Pasos](#primeros-pasos)
-- [Estructura de la Comunidad](#estructura-de-la-comunidad)
-- [Programas e Iniciativas](#programas-e-iniciativas)
-- [Eventos y Actividades](#eventos-y-actividades)
-- [Guías de Contribución](#guías-de-contribución)
-- [Flujo de Desarrollo](#flujo-de-desarrollo)
-- [Proceso de Revisión de Código](#proceso-de-revisión-de-código)
-- [Métricas de la Comunidad](#métricas-de-la-comunidad)
-- [Reconocimientos y Premios](#reconocimientos-y-premios)
-- [Recursos y Documentación](#recursos-y-documentación)
-- [Soporte y Ayuda](#soporte-y-ayuda)
-- [Gobernanza](#gobernanza)
-- [Código de Conducta](#código-de-conducta)
-- [Política de Seguridad](#política-de-seguridad)
-- [Hoja de Ruta](#hoja-de-ruta)
-- [Preguntas Frecuentes](#preguntas-frecuentes)
-- [Licencia](#licencia)
-- [Agradecimientos](#agradecimientos)
-
----
-
 ## Acerca de CodeVerse
 
 CodeVerse representa un ecosistema integral diseñado para fomentar la colaboración, el aprendizaje y la innovación dentro de la comunidad global de desarrollo de software. Fundada en 2024, nuestra plataforma sirve como un nexo donde desarrolladores de todos los niveles de habilidad convergen para compartir conocimientos, colaborar en proyectos y avanzar en sus carreras tecnológicas.
