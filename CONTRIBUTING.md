@@ -62,7 +62,6 @@ Si eres nuevo en contribuciones de código abierto, revisa estos recursos:
 
 Asegúrate de tener instalado:
 
-```bash
 # Versiones mínimas requeridas
 Node.js >= 18.0.0
 npm >= 8.0.0
