@@ -729,11 +729,12 @@ Cada componente/módulo debe tener documentación:
 Componente para mostrar información de usuario con capacidades de edición.
 
 ## Props
-| Prop | Tipo | Requerido | Default | Descripción |
-|------|------|-----------|---------|-------------|
-| user | User | ✅ | - | Datos del usuario |
-| onEdit | Function | ❌ | undefined | Callback para editar usuario |
-| isEditable | boolean | ❌ | false | Habilita modo edición |
+
+| Prop       | Tipo      | Requerido | Valor por defecto | Descripción                     |
+|------------|-----------|-----------|-------------------|---------------------------------|
+| `user`     | `User`    | ✅        | -                 | Datos del usuario              |
+| `onEdit`   | `Function`| ❌        | `undefined`       | Callback para editar usuario    |
+| `isEditable`| `boolean` | ❌        | `false`           | Habilita el modo de edición    |
 
 ## Ejemplos de Uso
 
