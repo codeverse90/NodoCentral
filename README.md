@@ -15,7 +15,7 @@
 
 ---
 
-## Acerca de CodeVerse
+## - Acerca de CodeVerse
 
 CodeVerse representa un ecosistema integral diseñado para fomentar la colaboración, el aprendizaje y la innovación dentro de la comunidad global de desarrollo de software. Fundada en 2024, nuestra plataforma sirve como un nexo donde desarrolladores de todos los niveles de habilidad convergen para compartir conocimientos, colaborar en proyectos y avanzar en sus carreras tecnológicas.
 
