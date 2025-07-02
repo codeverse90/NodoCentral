@@ -730,11 +730,11 @@ Componente para mostrar información de usuario con capacidades de edición.
 
 ## Props
 
-| Prop       | Tipo      | Requerido | Valor por defecto | Descripción                     |
-|------------|-----------|-----------|-------------------|---------------------------------|
-| `user`     | `User`    | ✅        | -                 | Datos del usuario              |
-| `onEdit`   | `Function`| ❌        | `undefined`       | Callback para editar usuario    |
-| `isEditable`| `boolean` | ❌        | `false`           | Habilita el modo de edición    |
+| Prop        | Tipo       | Requerido | Default    | Descripción                  |
+|-------------|------------|-----------|------------|------------------------------|
+| `user`      | `User`     | Sí        | -          | Objeto con datos del usuario |
+| `onEdit`    | `Function` | No        | undefined  | Función para editar usuario  |
+| `isEditable`| `boolean`  | No        | false      | Activa modo de edición       |
 
 ## Ejemplos de Uso
 
