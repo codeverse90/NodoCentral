@@ -11,16 +11,6 @@
   [![Cheatsheets](https://img.shields.io/badge/Cheatsheets-Explorar-3D4A98?style=for-the-badge)](https://codeversecheatsheet.netlify.app/)
   [![Discord](https://img.shields.io/badge/Discord-Unirse-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jtPDZ4EbXW)
   
-  ![GitHub Stars](https://img.shields.io/github/stars/codeverse-community?style=social)
-  ![GitHub Forks](https://img.shields.io/github/forks/codeverse-community?style=social)
-  ![Contributors](https://img.shields.io/github/contributors/codeverse-community/repository?color=brightgreen)
-  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-  ![Last Commit](https://img.shields.io/github/last-commit/codeverse-community/repository)
-  ![Issues](https://img.shields.io/github/issues/codeverse-community/repository)
-  ![Pull Requests](https://img.shields.io/github/issues-pr/codeverse-community/repository)
-  ![Code Quality](https://img.shields.io/codefactor/grade/github/codeverse-community/repository)
-  ![Security Rating](https://img.shields.io/snyk/vulnerabilities/github/codeverse-community/repository)
-  
 </div>
 
 ---
