@@ -1114,4 +1114,4 @@ npm run deps:update      # Actualiza las dependencias interactivamente
 ### Reconocimientos
 > Este proyecto existe gracias a todas las personas que contribuyen. Agradecemos profundamente a cada uno de ustedes por su tiempo, esfuerzo y dedicación.
 
- • Atte: `CodeVerse`
+ • Atte: `NodoCentral`
