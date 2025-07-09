@@ -5,7 +5,7 @@
   
   **Una comunidad apasionada por la tecnología, el desarrollo y el código**
   
-  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-B402BD?style=for-the-badge)](https://codeverseweb.netlify.app/)
+  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-B402BD?style=for-the-badge)](https://nodocentral.netlify.app/)
   [![Documentación](https://img.shields.io/badge/Documentación-Leer-B402BD?style=for-the-badge)](https://codeversedocs.netlify.app/)
   [![Discord](https://img.shields.io/badge/Discord-Unirse-B402BD?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/comunidad-de-programadores-775907616986890261)
   
