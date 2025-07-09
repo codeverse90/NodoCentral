@@ -5,22 +5,21 @@
   
   **Una comunidad apasionada por la tecnología, el desarrollo y el código**
   
-  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-3D4A98?style=for-the-badge)](https://codeverseweb.netlify.app/)
-  [![Documentación](https://img.shields.io/badge/Documentación-Leer-3D4A98?style=for-the-badge)](https://codeversedocs.netlify.app/)
-  [![Cheatsheets](https://img.shields.io/badge/Cheatsheets-Explorar-3D4A98?style=for-the-badge)](https://codeversecheatsheet.netlify.app/)
-  [![Discord](https://img.shields.io/badge/Discord-Unirse-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jtPDZ4EbXW)
+  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-B402BD?style=for-the-badge)](https://codeverseweb.netlify.app/)
+  [![Documentación](https://img.shields.io/badge/Documentación-Leer-B402BD?style=for-the-badge)](https://codeversedocs.netlify.app/)
+  [![Discord](https://img.shields.io/badge/Discord-Unirse-B402BD?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jtPDZ4EbXW)
   
 </div>
 
 ---
 
-# Acerca de CodeVerse
+# Acerca de NodoCentral
 
-> CodeVerse representa un ecosistema integral diseñado para fomentar la colaboración, el aprendizaje y la innovación dentro de la comunidad global de desarrollo de software. Fundada en 2025, nuestra plataforma sirve como un nexo donde desarrolladores de todos los niveles de habilidad convergen para compartir conocimientos, colaborar en proyectos y avanzar en sus carreras tecnológicas.
+> NodoCentral representa un ecosistema integral diseñado para fomentar la colaboración, el aprendizaje y la innovación dentro de la comunidad global de desarrollo de software. Fundada en 2025, nuestra plataforma sirve como un nexo donde desarrolladores de todos los niveles de habilidad convergen para compartir conocimientos, colaborar en proyectos y avanzar en sus carreras tecnológicas.
 
-## Lo que Hace Único a CodeVerse
+## Lo que Hace Único a NodoCentral 
 
-CodeVerse se distingue por su compromiso de crear un entorno inclusivo y de apoyo que prioriza tanto la excelencia técnica como el crecimiento personal. A diferencia de las comunidades tradicionales de programación que se enfocan únicamente en compartir código, CodeVerse enfatiza:
+NodoCentral se distingue por su compromiso de crear un entorno inclusivo y de apoyo que prioriza tanto la excelencia técnica como el crecimiento personal. A diferencia de las comunidades tradicionales de programación que se enfocan únicamente en compartir código, CodeVerse enfatiza:
 
 - Mentoría personalizada
 - Rutas de aprendizaje estructuradas  
@@ -37,7 +36,7 @@ Creemos que cada desarrollador tiene perspectivas y experiencias únicas que pue
 
 ## Filosofía de la Comunidad
 
-En CodeVerse, operamos bajo tres pilares fundamentales:
+En NodoCentral, operamos bajo tres pilares fundamentales:
 
 **Accesibilidad**:  
 La tecnología debe ser accesible para todos, independientemente de su trasfondo, nivel de experiencia o ubicación geográfica.
@@ -290,13 +289,13 @@ Ser reconocidos como la plataforma líder mundial para:
 
 ---
 
-> CodeVerse se consolida como más que una comunidad de desarrollo: es un movimiento que reúne a profesionales y entusiastas de la tecnología bajo una visión compartida de crecimiento colectivo. Nuestro modelo único combina:
+> NodoCentral se consolida como más que una comunidad de desarrollo: es un movimiento que reúne a profesionales y entusiastas de la tecnología bajo una visión compartida de crecimiento colectivo. Nuestro modelo único combina:
 
 - **Educación técnica rigurosa** con **aprendizaje colaborativo**
 - **Desarrollo profesional** con **impacto social positivo**
 - **Innovación tecnológica** con **accesibilidad universal**
 
-Al unirte a CodeVerse, formas parte de un ecosistema diseñado para:
+Al unirte a NodoCentral, formas parte de un ecosistema diseñado para:
 - Acelerar tu crecimiento como desarrollador
 - Contribuir a proyectos con propósito real
 - Conectar con una red global de profesionales apasionados
