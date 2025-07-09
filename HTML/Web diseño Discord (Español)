@@ -1,11 +1,11 @@
-# CodeVerse
+# NodoCentral 
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeVerse - Comunidad</title>
+    <title>NodoCentral - Comunidad</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -47,9 +47,9 @@
             <!-- Icono del servidor principal -->
             <a href="#" class="relative block group">
                 <div class="flex items-center justify-center w-12 h-12 text-2xl font-bold text-white transition-all duration-200 ease-in-out bg-blue-600 rounded-full group-hover:bg-blue-500 group-hover:rounded-2xl">
-                    CV
+                    NC
                 </div>
-                <div class="absolute p-2 text-sm text-white bg-black rounded-md -right-20 top-2 scale-0 group-hover:scale-100 transition-transform duration-200 ease-in-out origin-left">CodeVerse</div>
+                <div class="absolute p-2 text-sm text-white bg-black rounded-md -right-20 top-2 scale-0 group-hover:scale-100 transition-transform duration-200 ease-in-out origin-left">NodoCentral</div>
             </a>
 
             <div class="w-8 h-px bg-gray-600"></div>
@@ -72,7 +72,7 @@
         <div class="flex flex-col w-64 bg-[#2f3136] flex-shrink-0">
             <!-- Encabezado del Servidor -->
             <header class="flex items-center justify-between p-4 font-bold text-white border-b border-black/20 shadow-lg h-14">
-                <h1>CodeVerse</h1>
+                <h1>NodoCentral</h1>
                 <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </header>
 
@@ -201,7 +201,7 @@
                                 <h4 class="font-semibold text-red-400">Admin</h4>
                                 <span class="text-xs text-gray-500">Ayer a las 12:00 PM</span>
                             </div>
-                            <h3 class="mt-2 text-2xl font-bold text-white">¡Te damos la bienvenida a CodeVerse!</h3>
+                            <h3 class="mt-2 text-2xl font-bold text-white">¡Te damos la bienvenida a NodoCentral!</h3>
                             <p class="mt-2 text-white">Este es el lugar para que nuestra comunidad de desarrolladores se conecte, colabore y aprenda. Para asegurar que este sea un espacio positivo para todos, por favor sigue nuestras reglas:</p>
                             <ul class="mt-4 space-y-2 list-disc list-inside text-gray-300">
                                 <li><strong>Sé respetuoso:</strong> Trata a todos con amabilidad. No se tolerará el acoso ni el discurso de odio.</li>
@@ -234,7 +234,7 @@
                                 <h4 class="font-semibold text-green-400">DevBeto</h4>
                                 <span class="text-xs text-gray-500">Hoy a las 10:02 AM</span>
                             </div>
-                            <p class="mt-1 text-white">¡Qué tal! Soy Beto, desarrollador backend. Me alegra unirme a la comunidad CodeVerse.</p>
+                            <p class="mt-1 text-white">¡Qué tal! Soy Beto, desarrollador backend. Me alegra unirme a la comunidad NodoCentral.</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
@@ -309,107 +309,4 @@ saluda("Mundo");
                             <div class="mt-4 space-y-2">
                                 <a href="https://developer.mozilla.org/" target="_blank" class="block p-3 bg-[#2f3136] rounded-lg hover:bg-gray-700/80 transition-colors duration-200">
                                     <strong class="text-blue-400">MDN Web Docs</strong>
-                                    <p class="text-sm text-gray-400">La mejor documentación para tecnologías web (HTML, CSS, JS).</p>
-                                </a>
-                                <a href="https://www.freecodecamp.org/" target="_blank" class="block p-3 bg-[#2f3136] rounded-lg hover:bg-gray-700/80 transition-colors duration-200">
-                                    <strong class="text-blue-400">freeCodeCamp</strong>
-                                    <p class="text-sm text-gray-400">Aprende a programar gratis. Crea proyectos. Obtén certificaciones.</p>
-                                </a>
-                                <a href="https://stackoverflow.com/" target="_blank" class="block p-3 bg-[#2f3136] rounded-lg hover:bg-gray-700/80 transition-colors duration-200">
-                                    <strong class="text-blue-400">Stack Overflow</strong>
-                                    <p class="text-sm text-gray-400">El foro de preguntas y respuestas más grande para programadores.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `
-            },
-            'voz-general': {
-                title: 'Voz General',
-                icon: '<svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.414a5 5 0 010-7.072m2.828 9.9a9 9 0 010-12.728M12 18.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>',
-                content: `
-                    <div class="flex flex-col items-center justify-center h-full text-center">
-                        <svg class="w-16 h-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 18.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9.228c.63-.63 1.48-1 2.372-1a3.5 3.5 0 013.5 3.5v1.586c0 .538.214 1.055.595 1.436l.707.707M8 21h8"></path></svg>
-                        <h3 class="mt-4 text-2xl font-semibold text-white">Conectado al canal de voz</h3>
-                        <p class="text-gray-400">¡Ya puedes empezar a hablar con otros miembros!</p>
-                    </div>
-                `
-            },
-            'gaming': {
-                title: 'Gaming',
-                icon: '<svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.414a5 5 0 010-7.072m2.828 9.9a9 9 0 010-12.728M12 18.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>',
-                 content: `
-                    <div class="flex flex-col items-center justify-center h-full text-center">
-                        <svg class="w-16 h-16 text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 10.5h-2v-2h2v2zm-3-3h-2v2h2v-2zm-3 0h-2v2h2v-2zm-3 0h-2v2h2v-2zm-3 0H5.5v2h2v-2zm12 6h-2v2h2v-2zm-12 0h-2v2h2v-2zm9-3h-2v2h2v-2zm-3 0h-2v2h2v-2zm-3 0h-2v2h2v-2zm-3-6H2.5v15h19v-15H17.5v-3h-11v3zM4.5 9.5h15v9h-15v-9z"></path></svg>
-                        <h3 class="mt-4 text-2xl font-semibold text-white">Canal de Voz: Gaming</h3>
-                        <p class="text-gray-400">¡Partida lista! Coordina con tu equipo aquí.</p>
-                    </div>
-                `
-            }
-        };
-
-        // --- Functions ---
-
-        /**
-         * Renders the content of a specific channel into the main view.
-         * @param {string} channelId - The ID of the channel to render.
-         */
-        function renderChannel(channelId) {
-            const data = channelData[channelId];
-            if (!data) {
-                console.error(`No data found for channel: ${channelId}`);
-                return;
-            }
-
-            // Update header
-            channelTitle.textContent = data.title;
-            channelIcon.innerHTML = data.icon;
-            
-            // Update message input placeholder
-            messageInput.placeholder = `Enviar mensaje a ${data.icon === '#' ? '#' : ''}${data.title}`;
-
-
-            // Update content
-            messageContainer.innerHTML = data.content;
-            messageContainer.scrollTop = 0; // Scroll to top on new channel load
-        }
-
-        /**
-         * Handles clicks on the channel list.
-         * @param {Event} e - The click event.
-         */
-        function handleChannelClick(e) {
-            const link = e.target.closest('.channel-link');
-            if (!link) return;
-
-            e.preventDefault();
-
-            // Get channel id from data attribute
-            const channelId = link.dataset.channel;
-
-            // Remove active state from all links
-            channelLinks.forEach(l => {
-                l.classList.remove('bg-gray-700/60', 'text-white');
-                l.classList.add('text-gray-300', 'hover:bg-gray-700/50');
-            });
-
-            // Add active state to the clicked link
-            link.classList.add('bg-gray-700/60', 'text-white');
-            link.classList.remove('text-gray-300', 'hover:bg-gray-700/50');
-
-            // Render the selected channel's content
-            renderChannel(channelId);
-        }
-
-
-        // --- Event Listeners ---
-        channelsList.addEventListener('click', handleChannelClick);
-
-        // --- Initial Load ---
-        // Load the 'general' channel by default when the page loads.
-        renderChannel('general');
-
-    });
-</script>
-</body>
-</html>
+                                    <p class="text-sm text-gray-30
