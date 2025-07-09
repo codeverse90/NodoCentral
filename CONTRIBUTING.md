@@ -1,17 +1,15 @@
 # **CONTRIBUTING.md**
 
 <div align="center">
-
-## **Guía de Contribución al Proyecto**
-
-[![Contributors Welcome](https://img.shields.io/badge/contributors-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
-[![First Timers Only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=for-the-badge)](https://www.firsttimersonly.com/)
-[![Code Quality](https://img.shields.io/badge/code%20quality-A+-green.svg?style=for-the-badge)]()
-[![Documentation](https://img.shields.io/badge/documentation-complete-blue.svg?style=for-the-badge)]()
-
-> *"El código es poesía, y cada contribución es un verso que mejora el proyecto"*
-
+  
+  ![NodocCentral](https://img.shields.io/badge/NodoCentral-B402BD?style=for-the-badge&logo=code&logoColor=white)
+  
+  **Una comunidad apasionada por la tecnología, el desarrollo y el código**
+  
+  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-B402BD?style=for-the-badge)](https://nodocentral.netlify.app/)
+  [![Documentación](https://img.shields.io/badge/Documentación-Leer-B402BD?style=for-the-badge)](https://discord.gg/comunidad-de-programadores-775907616986890261)
+  [![Discord](https://img.shields.io/badge/Discord-Unirse-B402BD?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/comunidad-de-programadores-775907616986890261)
+  
 </div>
 
 ---
