@@ -1,4 +1,4 @@
-# Código de Conducta de CodeVerse
+# Código de Conducta de NodoCentral 
 
 ## 1. Nuestra Promesa
 
