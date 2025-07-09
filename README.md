@@ -1,7 +1,7 @@
 
 <div align="center">
   
-  ![NodocCentral](https://img.shields.io/badge/CodeVerse-3D4A98?style=for-the-badge&logo=code&logoColor=white)
+  ![NodocCentral](https://img.shields.io/badge/NodoCentral-B402BD?style=for-the-badge&logo=code&logoColor=white)
   
   **Una comunidad apasionada por la tecnología, el desarrollo y el código**
   
