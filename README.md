@@ -13,11 +13,11 @@
 
 ---
 
-# Acerca de NodoCentral
+# Acerca de DevCore
 
 > NodoCentral representa un ecosistema integral diseñado para fomentar la colaboración, el aprendizaje y la innovación dentro de la comunidad global de desarrollo de software. Fundada en 2025, nuestra plataforma sirve como un nexo donde desarrolladores de todos los niveles de habilidad convergen para compartir conocimientos, colaborar en proyectos y avanzar en sus carreras tecnológicas.
 
-## Lo que Hace Único a NodoCentral 
+## Lo que Hace Único a DevCore 
 
 NodoCentral se distingue por su compromiso de crear un entorno inclusivo y de apoyo que prioriza tanto la excelencia técnica como el crecimiento personal. A diferencia de las comunidades tradicionales de programación que se enfocan únicamente en compartir código, CodeVerse enfatiza:
 
@@ -289,13 +289,13 @@ Ser reconocidos como la plataforma líder mundial para:
 
 ---
 
-> NodoCentral se consolida como más que una comunidad de desarrollo: es un movimiento que reúne a profesionales y entusiastas de la tecnología bajo una visión compartida de crecimiento colectivo. Nuestro modelo único combina:
+> DevCore se consolida como más que una comunidad de desarrollo: es un movimiento que reúne a profesionales y entusiastas de la tecnología bajo una visión compartida de crecimiento colectivo. Nuestro modelo único combina:
 
 - **Educación técnica rigurosa** con **aprendizaje colaborativo**
 - **Desarrollo profesional** con **impacto social positivo**
 - **Innovación tecnológica** con **accesibilidad universal**
 
-Al unirte a NodoCentral, formas parte de un ecosistema diseñado para:
+Al unirte a DevCore, formas parte de un ecosistema diseñado para:
 - Acelerar tu crecimiento como desarrollador
 - Contribuir a proyectos con propósito real
 - Conectar con una red global de profesionales apasionados
