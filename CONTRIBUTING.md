@@ -2,13 +2,13 @@
 
 <div align="center">
   
-  ![NodocCentral](https://img.shields.io/badge/NodoCentral-B402BD?style=for-the-badge&logo=code&logoColor=white)
+  ![DevCore](https://img.shields.io/badge/DevCore-0437FF?style=for-the-badge&logo=code&logoColor=white)
   
   **Una comunidad apasionada por la tecnología, el desarrollo y el código**
   
-  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-B402BD?style=for-the-badge)](https://nodocentral.netlify.app/)
-  [![Documentación](https://img.shields.io/badge/Documentación-Leer-B402BD?style=for-the-badge)](https://discord.gg/comunidad-de-programadores-775907616986890261)
-  [![Discord](https://img.shields.io/badge/Discord-Unirse-B402BD?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/comunidad-de-programadores-775907616986890261)
+  [![Página Web](https://img.shields.io/badge/Página_Web-Visitar-0437FF?style=for-the-badge)](https://nodocentral.netlify.app/)
+  [![Documentación](https://img.shields.io/badge/Documentación-Leer-0437FF?style=for-the-badge)](https://discord.gg/43GVY7sqSg)
+  [![Discord](https://img.shields.io/badge/Discord-Unirse-0437FF?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/43GVY7sqSg)
   
 </div>
 
