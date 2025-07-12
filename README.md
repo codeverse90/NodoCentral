@@ -1,7 +1,7 @@
 
 <div align="center">
   
-  ![DevCore](https://img.shields.io/badge/NodoCentral-0437FF?style=for-the-badge&logo=code&logoColor=white)
+  ![DevCore](https://img.shields.io/badge/DevCore-0437FF?style=for-the-badge&logo=code&logoColor=white)
   
   **Una comunidad apasionada por la tecnología, el desarrollo y el código**
   
