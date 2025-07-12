@@ -1,11 +1,13 @@
-# NodoCentral 
+# DevCore
+
+ 
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NodoCentral - Comunidad</title>
+    <title>DevCore - Comunidad</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -47,9 +49,9 @@
             <!-- Icono del servidor principal -->
             <a href="#" class="relative block group">
                 <div class="flex items-center justify-center w-12 h-12 text-2xl font-bold text-white transition-all duration-200 ease-in-out bg-blue-600 rounded-full group-hover:bg-blue-500 group-hover:rounded-2xl">
-                    NC
+                    DC
                 </div>
-                <div class="absolute p-2 text-sm text-white bg-black rounded-md -right-20 top-2 scale-0 group-hover:scale-100 transition-transform duration-200 ease-in-out origin-left">NodoCentral</div>
+                <div class="absolute p-2 text-sm text-white bg-black rounded-md -right-20 top-2 scale-0 group-hover:scale-100 transition-transform duration-200 ease-in-out origin-left">DevCore</div>
             </a>
 
             <div class="w-8 h-px bg-gray-600"></div>
@@ -72,7 +74,7 @@
         <div class="flex flex-col w-64 bg-[#2f3136] flex-shrink-0">
             <!-- Encabezado del Servidor -->
             <header class="flex items-center justify-between p-4 font-bold text-white border-b border-black/20 shadow-lg h-14">
-                <h1>NodoCentral</h1>
+                <h1>DevCore</h1>
                 <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </header>
 
